@@ -1,2 +1,3 @@
-# abda game 
-Abda game is a mini iOS game building by swift  
+# abda game
+
+Abda can be described as a mini iOS game, built using swift.
