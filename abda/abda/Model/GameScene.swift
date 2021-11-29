@@ -34,7 +34,7 @@ class GameScene: SKScene {
                         self.view?.presentScene(scene)
                     }
                 }
-                let sequence = SKAction.sequence([SKAction.playSoundFileNamed("pop.mp3", waitForCompletion: false),SKAction.wait(forDuration: 0.7), changeScene])
+                let sequence = SKAction.sequence([SKAction.playSoundFileNamed("pop.mp3", waitForCompletion: false),SKAction.wait(forDuration: 0.2), changeScene])
 
                 startButton.run(sequence)
             }
