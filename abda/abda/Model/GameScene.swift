@@ -10,12 +10,23 @@ import GameplayKit
 
 class GameScene: SKScene {
 
+    private var background: SKSpriteNode?
     private var startButton: SKSpriteNode?
     
     override func didMove(to view: SKView) {
 
-        // show start
+        //show start
         self.startButton = self.childNode(withName: "startButton") as? SKSpriteNode
+
+        //show background
+        self.background = self.childNode(withName: "background") as? SKSpriteNode
+        let moveAngelUp = SKAction.move(to: CGPoint(x: 100, y: 0), duration: 3.0)
+        let moveAngelDown = SKAction.move(to: CGPoint(x: -100, y: 0), duration: 3.0)
+
+        let moveSequenceUpDown = SKAction.sequence([moveAngelUp,moveAngelDown])
+        let bgMoving = SKAction.repeatForever(moveSequenceUpDown)
+
+        self.background?.run(bgMoving)
 
 
     }//end didMove

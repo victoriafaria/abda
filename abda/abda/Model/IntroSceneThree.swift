@@ -1,27 +1,26 @@
 //
-//  IntroSceneOne.swift
+//  IntroSceneTwo.swift
 //  abda
 //
-//  Created by Victoria Faria on 28/11/21.
+//  Created by Victoria Faria on 29/11/21.
 //
 
-import Foundation
 import SpriteKit
 
-class IntroSceneOne: SKScene {
+class IntroSceneThree: SKScene {
 
     private var introLabel: SKLabelNode?
-    private var nextButton: SKSpriteNode?
+    private var playButton: SKSpriteNode?
 
     override func didMove(to view: SKView) {
 
         // show the typing
         // ps: Just for less texts
         self.introLabel = self.childNode(withName: "introLabel") as? SKLabelNode
-        setTyping(text: "........ ")
+        setTyping(text: "Abda precisa de sua ajuda...")
 
-        // show nextButton
-        self.nextButton = self.childNode(withName: "nextButton") as? SKSpriteNode
+        // show playButton
+        self.playButton = self.childNode(withName: "playButton") as? SKSpriteNode
     }
 
 
@@ -46,10 +45,10 @@ class IntroSceneOne: SKScene {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in:self)
-            if let nextButton = self.nextButton, nextButton.contains(location) {
+            if let playButton = self.playButton, playButton.contains(location) {
                  let changeScene = SKAction.run {
 
-                    if let scene = IntroSceneTwo (fileNamed: "IntroSceneTwo"){
+                    if let scene = GamePlay (fileNamed: "GamePlay"){
                         scene.scaleMode = .aspectFill
 
                         self.view?.ignoresSiblingOrder = false
@@ -58,11 +57,8 @@ class IntroSceneOne: SKScene {
                 }
                 let sequence = SKAction.sequence([SKAction.playSoundFileNamed("pop.mp3", waitForCompletion: false),SKAction.wait(forDuration: 0.2), changeScene])
 
-                nextButton.run(sequence)
+                playButton.run(sequence)
             }
         }
     }
-
-
-
 }
