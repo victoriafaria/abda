@@ -15,18 +15,14 @@ class GamePlay: SKScene {
     //score
     public var score = 0
 
-
     //time
     var timer: Timer!
     var timerGame: Timer?
     var timerInt = 60
 
 
-
     override func didMove(to view: SKView) {
-
         self.o2 = self.childNode(withName: "o2") as? SKSpriteNode
-
 
 
         timer = Timer.scheduledTimer(withTimeInterval: 0.7, repeats: true, block: { (timer) in
@@ -47,7 +43,6 @@ class GamePlay: SKScene {
 
 
     func spawnThings(speed: Double) {
-
         // create 02
         let texture = SKTexture(imageNamed: "o2")
         let o2 = SKSpriteNode(texture: texture)
@@ -65,7 +60,6 @@ class GamePlay: SKScene {
         o2.zPosition = 2
         self.addChild(o2)
         o2.run(actions)
-
     }
 
 

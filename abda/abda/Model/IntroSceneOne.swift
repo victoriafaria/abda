@@ -10,6 +10,7 @@ import SpriteKit
 
 class IntroSceneOne: SKScene {
 
+    private var background: SKSpriteNode?
     private var introLabel: SKLabelNode?
     private var nextButton: SKSpriteNode?
 
@@ -22,6 +23,17 @@ class IntroSceneOne: SKScene {
 
         // show nextButton
         self.nextButton = self.childNode(withName: "nextButton") as? SKSpriteNode
+
+
+        //show background
+        self.background = self.childNode(withName: "background") as? SKSpriteNode
+        let moveAngelUp = SKAction.move(to: CGPoint(x: 100, y: 0), duration: 3.0)
+        let moveAngelDown = SKAction.move(to: CGPoint(x: -100, y: 0), duration: 3.0)
+
+        let moveSequenceUpDown = SKAction.sequence([moveAngelUp,moveAngelDown])
+        let bgMoving = SKAction.repeatForever(moveSequenceUpDown)
+
+        self.background?.run(bgMoving)
     }
 
 
