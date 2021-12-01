@@ -19,7 +19,7 @@ class IntroSceneOne: SKScene {
         // show the typing
         // ps: Just for less texts
         self.introLabel = self.childNode(withName: "introLabel") as? SKLabelNode
-        setTyping(text: "........ ")
+        setTyping(text: "")
 
         // show nextButton
         self.nextButton = self.childNode(withName: "nextButton") as? SKSpriteNode

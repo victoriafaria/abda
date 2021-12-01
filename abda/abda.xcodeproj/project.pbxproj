@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2393B3227581B0A0084E8BC /* bensound-adventure-2-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E2393B3127581B0A0084E8BC /* bensound-adventure-2-2.mp3 */; };
 		E23CD7892753F2C600786391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23CD7882753F2C600786391 /* AppDelegate.swift */; };
 		E23CD78B2753F2C600786391 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E23CD78A2753F2C600786391 /* GameScene.sks */; };
 		E23CD78D2753F2C600786391 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E23CD78C2753F2C600786391 /* Actions.sks */; };
@@ -26,9 +27,13 @@
 		E297DA1B275483EF002A6C96 /* tictac.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E297DA18275483EF002A6C96 /* tictac.mp3 */; };
 		E297DA1D27548733002A6C96 /* IntroSceneThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E297DA1C27548733002A6C96 /* IntroSceneThree.swift */; };
 		E297DA1F2754876B002A6C96 /* IntroSceneThree.sks in Resources */ = {isa = PBXBuildFile; fileRef = E297DA1E2754876B002A6C96 /* IntroSceneThree.sks */; };
+		E2A977602756E29C0035A3D9 /* ScoreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A9775F2756E29B0035A3D9 /* ScoreScene.swift */; };
+		E2A977622756E30E0035A3D9 /* ScoreScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2A977612756E30E0035A3D9 /* ScoreScene.sks */; };
+		E2A977642756E7A80035A3D9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A977632756E7A80035A3D9 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E2393B3127581B0A0084E8BC /* bensound-adventure-2-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-adventure-2-2.mp3"; sourceTree = "<group>"; };
 		E23CD7852753F2C600786391 /* abda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23CD7882753F2C600786391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E23CD78A2753F2C600786391 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		E297DA18275483EF002A6C96 /* tictac.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tictac.mp3; sourceTree = "<group>"; };
 		E297DA1C27548733002A6C96 /* IntroSceneThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroSceneThree.swift; sourceTree = "<group>"; };
 		E297DA1E2754876B002A6C96 /* IntroSceneThree.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = IntroSceneThree.sks; sourceTree = "<group>"; };
+		E2A9775F2756E29B0035A3D9 /* ScoreScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreScene.swift; sourceTree = "<group>"; };
+		E2A977612756E30E0035A3D9 /* ScoreScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ScoreScene.sks; sourceTree = "<group>"; };
+		E2A977632756E7A80035A3D9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 				E254EFAE2755983E00D44846 /* IntroSceneTwo.swift */,
 				E297DA1C27548733002A6C96 /* IntroSceneThree.swift */,
 				E254EFB22755A0DB00D44846 /* GamePlay.swift */,
+				E2A9775F2756E29B0035A3D9 /* ScoreScene.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +123,7 @@
 				E254EFAC2755979000D44846 /* IntroSceneTwo.sks */,
 				E297DA1E2754876B002A6C96 /* IntroSceneThree.sks */,
 				E254EFB027559F9900D44846 /* GamePlay.sks */,
+				E2A977612756E30E0035A3D9 /* ScoreScene.sks */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -122,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				E23CD7902753F2C600786391 /* GameViewController.swift */,
+				E2A977632756E7A80035A3D9 /* Persistence.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -137,6 +148,7 @@
 		E297DA1527547A19002A6C96 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				E2393B3127581B0A0084E8BC /* bensound-adventure-2-2.mp3 */,
 				E297DA16275483EF002A6C96 /* bubble.mp3 */,
 				E297DA17275483EF002A6C96 /* pop.mp3 */,
 				E297DA18275483EF002A6C96 /* tictac.mp3 */,
@@ -208,12 +220,14 @@
 				E23CD7962753F2CC00786391 /* Assets.xcassets in Resources */,
 				E254EFAD2755979000D44846 /* IntroSceneTwo.sks in Resources */,
 				E297DA1F2754876B002A6C96 /* IntroSceneThree.sks in Resources */,
+				E2A977622756E30E0035A3D9 /* ScoreScene.sks in Resources */,
 				E297DA1A275483EF002A6C96 /* pop.mp3 in Resources */,
 				E254EFB127559F9900D44846 /* GamePlay.sks in Resources */,
 				E23CD7992753F2CC00786391 /* LaunchScreen.storyboard in Resources */,
 				E23CD78D2753F2C600786391 /* Actions.sks in Resources */,
 				E297DA19275483EF002A6C96 /* bubble.mp3 in Resources */,
 				E297DA1B275483EF002A6C96 /* tictac.mp3 in Resources */,
+				E2393B3227581B0A0084E8BC /* bensound-adventure-2-2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,11 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A977642756E7A80035A3D9 /* Persistence.swift in Sources */,
 				E23CD78F2753F2C600786391 /* GameScene.swift in Sources */,
 				E23CD7912753F2C600786391 /* GameViewController.swift in Sources */,
 				E254EFAF2755983E00D44846 /* IntroSceneTwo.swift in Sources */,
 				E297DA1D27548733002A6C96 /* IntroSceneThree.swift in Sources */,
 				E297DA132754788C002A6C96 /* IntroSceneOne.swift in Sources */,
+				E2A977602756E29C0035A3D9 /* ScoreScene.swift in Sources */,
 				E23CD7892753F2C600786391 /* AppDelegate.swift in Sources */,
 				E254EFB32755A0DB00D44846 /* GamePlay.swift in Sources */,
 			);

@@ -6,15 +6,28 @@
 //
 
 import SpriteKit
+import UIKit
 
 class IntroSceneTwo: SKScene {
 
+    private var background: SKSpriteNode?
     private var nextButton: SKSpriteNode?
 
     override func didMove(to view: SKView) {
 
         // show nextButton
         self.nextButton = self.childNode(withName: "nextButton") as? SKSpriteNode
+
+
+        //show background
+        self.background = self.childNode(withName: "background") as? SKSpriteNode
+        let moveAngelUp = SKAction.move(to: CGPoint(x: 100, y: 0), duration: 3.0)
+        let moveAngelDown = SKAction.move(to: CGPoint(x: -100, y: 0), duration: 3.0)
+
+        let moveSequenceUpDown = SKAction.sequence([moveAngelUp,moveAngelDown])
+        let bgMoving = SKAction.repeatForever(moveSequenceUpDown)
+
+        self.background?.run(bgMoving)
     }
 
 
